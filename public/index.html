@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover something extraordinary at NOVARA. Shop modern essentials across technology, fashion, beauty and more.">
+    <title>NOVARA | Discover Something Extraordinary</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="announcement">
+        <p>WELCOME TO NOVARA — DISCOVER YOUR NEXT FAVORITE</p>
+    </div>
+
+    <header class="header">
+        <a class="logo" href="/">NOVARA<span>.</span></a>
+
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#categories">Categories</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="icon-button" id="searchToggle" aria-label="Search products">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            
+<a class="icon-button cart-button"
+   href="/cart.html"
+   aria-label="Shopping bag">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span id="cartCount">0</span>
+</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="search-panel" id="searchPanel">
+        <input type="search" id="searchInput" placeholder="Search your next favorite...">
+        <button id="searchClose" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">THE NOVARA COLLECTION</span>
+                <h1>Everyday essentials.<br><span>Extraordinary living.</span></h1>
+                <p>Explore a considered collection of modern essentials, designed to bring a little something special to every day.</p>
+                <a href="#products" class="primary-button">Explore the collection <i class="fa-solid fa-arrow-right"></i></a>
+
+                <div class="hero-note">
+                    <span class="note-line"></span>
+                    <span>CURATED FOR YOUR EVERYDAY</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Curated fashion and lifestyle collection">
+                </div>
+                <div class="floating-card">
+                    <span class="floating-label">THE EDIT</span>
+                    <strong>Small details.<br>Big difference.</strong>
+                    <span class="floating-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </div>
+                <div class="hero-decoration">N.</div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div><i class="fa-solid fa-truck-fast"></i><span>Convenient shopping</span></div>
+            <div><i class="fa-solid fa-shield-halved"></i><span>Secure account access</span></div>
+            <div><i class="fa-solid fa-box-open"></i><span>Everyday essentials</span></div>
+            <div><i class="fa-solid fa-headset"></i><span>Customer support</span></div>
+        </section>
+
+        <section class="categories-section" id="categories">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FIND YOUR FAVORITE</span>
+                    <h2>Shop by <span>category.</span></h2>
+                </div>
+                <p>A little inspiration for whatever your day calls for.</p>
+            </div>
+
+            <div class="category-list" id="categoryList">
+                <button class="category-chip active" data-category="All">All products</button>
+            </div>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="section-heading product-heading">
+                <div>
+                    <span class="eyebrow">THE NOVARA EDIT</span>
+                    <h2>Made for <span>your everyday.</span></h2>
+                </div>
+                <span class="product-total" id="productTotal">Loading collection...</span>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <div class="loading-state">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i>
+                    <p>Preparing your collection...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div>
+                <span class="eyebrow">A NOTE FROM NOVARA</span>
+                <h2>Good things are<br><span>worth discovering.</span></h2>
+                <p>Stay curious. Find your next favorite.</p>
+            </div>
+            <a href="#products" class="newsletter-button">Explore NOVARA <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="newsletter-mark">N.</div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="logo footer-logo" href="/">NOVARA<span>.</span></a>
+        <p>Discover something extraordinary.</p>
+        <span>© <span id="currentYear"></span> NOVARA. All rights reserved.</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | NOVARA</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+</head>
+<body>
+
+    <div class="announcement">
+        YOUR NEXT FAVORITE IS JUST AROUND THE CORNER
+    </div>
+
+    <header class="header">
+        <a class="logo" href="/">NOVARA<span>.</span></a>
+
+        <nav class="navigation">
+            <a href="/">Home</a>
+            <a href="/#products">Shop</a>
+            <a href="/cart.html">Shopping Bag</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="icon-button" href="/cart.html" aria-label="Shopping bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="checkout-page">
+
+        <div class="checkout-heading">
+            <span class="eyebrow">ALMOST YOURS</span>
+            <h1>Secure <span>checkout.</span></h1>
+            <p>Enter your delivery details to complete your order.</p>
+        </div>
+
+        <div class="checkout-layout">
+
+            <section class="checkout-form-section">
+                <h2>Delivery information</h2>
+                <p class="section-description">
+                    Where should we deliver your NOVARA order?
+                </p>
+
+                <form id="checkoutForm">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full name *</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone number *</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="07XXXXXXXX"
+                                autocomplete="tel"
+                                pattern="[0-9+\s()-]{9,15}"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Delivery address *</label>
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="3"
+                            placeholder="House number, street, town or village"
+                            autocomplete="street-address"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City / Town *</label>
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                placeholder="Enter your city"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="postalCode">Postal code</label>
+                            <input
+                                type="text"
+                                id="postalCode"
+                                name="postalCode"
+                                placeholder="Optional"
+                                autocomplete="postal-code"
+                            >
+                        </div>
+                    </div>
+
+                    <h2 class="payment-heading">Payment method</h2>
+
+                    <label class="payment-option">
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="COD"
+                            checked
+                        >
+
+                        <span class="payment-icon">
+                            <i class="fa-solid fa-truck"></i>
+                        </span>
+
+                        <span class="payment-text">
+                            <strong>Cash on Delivery</strong>
+                            <small>Pay when your order arrives.</small>
+                        </span>
+                    </label>
+
+                    <p class="payment-note">
+                        Online card payments are not enabled yet.
+                    </p>
+
+                    <button
+                        type="submit"
+                        id="placeOrderButton"
+                        class="checkout-button place-order-button"
+                    >
+                        Place order
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p id="checkoutMessage" class="checkout-message" role="status"></p>
+
+                    <a class="back-to-cart" href="/cart.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Return to shopping bag
+                    </a>
+
+                </form>
+            </section>
+
+            <aside class="order-summary">
+                <span class="eyebrow">YOUR SELECTION</span>
+                <h2>Order summary</h2>
+
+                <div id="checkoutItems" class="checkout-items">
+                    <p class="summary-loading">Loading your order...</p>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="checkoutSubtotal">LKR 0</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Delivery</span>
+                    <span>Confirmed later</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-line total-line">
+                    <strong>Estimated total</strong>
+                    <strong id="checkoutTotal">LKR 0</strong>
+                </div>
+
+                <p class="summary-note">
+                    Delivery charges will be confirmed by NOVARA.
+                </p>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a class="logo footer-logo" href="/">NOVARA<span>.</span></a>
+        <p>Discover something extraordinary.</p>
+        <span>© <span id="currentYear"></span> NOVARA. All rights reserved.</span>
+    </footer>
+
+    <script src="/js/checkout.js"></script>
+</body>
+</html>

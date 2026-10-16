@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Bag | NOVARA</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="announcement">YOUR NEXT FAVORITE IS JUST AROUND THE CORNER</div>
+
+    <header class="header">
+        <a class="logo" href="/">NOVARA<span>.</span></a>
+        <nav class="navigation">
+            <a href="/">Home</a>
+            <a href="/#products">Shop</a>
+            <a href="/#categories">Categories</a>
+        </nav>
+        <div class="header-actions">
+            <a class="icon-button" href="/#products" aria-label="Continue shopping">
+                <i class="fa-solid fa-store"></i>
+            </a>
+            <button class="icon-button cart-button" aria-label="Shopping bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <div class="cart-heading">
+            <span class="eyebrow">YOUR NOVARA SELECTION</span>
+            <h1>Your shopping <span>bag.</span></h1>
+            <p>Review your favorites before making them yours.</p>
+        </div>
+
+        <div class="cart-layout">
+            <section class="cart-items-section">
+                <div class="cart-section-heading">
+                    <h2>Your items</h2>
+                    <span id="itemCount">0 items</span>
+                </div>
+                <div id="cartItems" class="cart-items">
+                    <p class="cart-loading">Loading your shopping bag...</p>
+                </div>
+                <a class="continue-shopping" href="/#products">
+                    <i class="fa-solid fa-arrow-left"></i> Continue shopping
+                </a>
+            </section>
+
+            <aside class="order-summary">
+                <span class="eyebrow">THE DETAILS</span>
+                <h2>Order summary</h2>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="subtotal">LKR 0</span>
+                </div>
+                <div class="summary-line">
+                    <span>Delivery</span>
+                    <span class="delivery-note">Calculated later</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-line total-line">
+                    <strong>Total</strong>
+                    <strong id="total">LKR 0</strong>
+                </div>
+
+                <p class="summary-note">
+                    Delivery charges and final order details will be confirmed at checkout.
+                </p>
+
+                <button id="checkoutButton" class="checkout-button">
+                    Continue to checkout <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="secure-note">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Your bag is saved in this browser.</span>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a class="logo footer-logo" href="/">NOVARA<span>.</span></a>
+        <p>Discover something extraordinary.</p>
+        <span>© <span id="currentYear"></span> NOVARA. All rights reserved.</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+   <script src="/js/cart.js"></script>
+</body>
+</html>
